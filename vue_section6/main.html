@@ -1,0 +1,36 @@
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>テンプレート構文</title>
+    <link rel="stylesheet" href="css/main.css">
+  </head>
+  <body>
+      <div id="app">
+          <p>
+            {{ reversedMessage }}
+          </p>
+          <p>
+            {{ reversedMessageMethod() }}
+          </p>
+          <p>
+            base price: <input type="text" v-model="basePrice">
+          </p>
+          <p>
+            tax included price: <input type="text" v-model="taxIncludedPrice">
+          </p>
+          <ol>
+            <li>{{ computedNumber }}</li>
+            <li>{{ computedNumber }}</li>
+            <li>{{ computedNumber }}</li>
+          </ol>
+          <ol>
+            <li>{{ methodsNumber() }}</li>
+            <li>{{ methodsNumber() }}</li>
+            <li>{{ methodsNumber() }}</li>
+          </ol>
+        </div>        
+  </body>
+</html>
+  
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+<script src="js/main.js"></script>

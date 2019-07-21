@@ -1,0 +1,53 @@
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>テンプレート構文</title>
+    <link rel="stylesheet" href="css/main.css">
+  </head>
+  <body>
+    <div id="app">
+        <p v-once>
+          {{ message }}
+        </p>
+        <button v-on:click="clickHandler">
+          Click!
+        </button>
+        <p v-html="html_message">
+          {{ html_message }}
+        </p>
+        <p v-cloak>
+          {{ cloak_message }}
+        </p>
+        <p v-text="vtext_message">
+        </p>
+        <p>
+          {{ number + 1 }}
+        </p>
+        <p>
+          {{ message.split('').reverse().join('') }}
+        </p>
+        <p>
+          {{ ok ? 'YES' : 'NO' }}
+        </p>
+        <p>
+          {{ ok ? message : '' }}
+        </p>
+        <p>
+        {{ price | numberFormat }}
+        </p>
+        <input type="text" v-bind:value="price | numberFormat">
+        <p>
+        {{ jpyPrice | toUSD | numberFormat }}
+        </p>
+        <p>
+          {{ text | readMore(20,'...')}}
+        </p>
+        <a v-bind:href="url" target="_blank">Link1</a>
+        <a :href="url" target="_blank">Link2</a>
+        
+      </div>
+  </body>
+</html>
+  
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+<script src="js/main.js"></script>
